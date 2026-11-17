@@ -39,6 +39,8 @@ services:
       WRITER_READ_TIMEOUT: "30"
       CONNECT_TIMEOUT: "3"
       PROBE_TIMEOUT: "2.5"
+      # 卷身份后台对账周期：节点被误挂空卷/异卷后，最迟该秒数内被识别并隔离。
+      IDENTITY_POLL_INTERVAL: "2"
     volumes:
       - proxy-data:/data
     depends_on:
